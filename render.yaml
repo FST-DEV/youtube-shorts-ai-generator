@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: youtube-shorts-ai-generator
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --bind 0.0.0.0:$PORT --workers 4 --timeout 300 app:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.16
+      - key: FLASK_ENV
+        value: production
+      - key: HUGGING_FACE_TOKEN
+        sync: false
+      - key: SENDER_EMAIL
+        sync: false
+      - key: SENDER_APP_PASSWORD
+        sync: false
+      - key: RECIPIENT_EMAILS
+        sync: false
+      - key: FLASK_SECRET_KEY
+        generateValue: true
+      - key: REPLICATE_API_TOKEN
+        sync: false
+    disk:
+      name: generated-content
+      mountPath: /app/static/generated
+      sizeGB: 1

@@ -1,0 +1,14 @@
+Flask==2.3.3
+requests==2.31.0
+python-dotenv==1.0.0
+Pillow==10.0.1
+
+# Optional: For enhanced image generation
+replicate==0.15.4
+diffusers==0.21.4
+torch==2.0.1
+transformers==4.33.2
+accelerate==0.21.0
+
+# Optional: For better performance (CUDA only)
+# xformers==0.0.21
