@@ -19,11 +19,11 @@ class YouTubeShortsAITestCase(unittest.TestCase):
         self.test_dir = tempfile.mkdtemp()
         
         # Set test environment variables
-        os.environ['HUGGING_FACE_TOKEN'] = 'test_token'
-        os.environ['SENDER_EMAIL'] = 'test@example.com'
-        os.environ['SENDER_APP_PASSWORD'] = 'test_password'
-        os.environ['RECIPIENT_EMAILS'] = 'recipient@example.com'
-        os.environ['FLASK_SECRET_KEY'] = 'test_secret'
+        os.environ['HUGGING_FACE_TOKEN'] = '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'
+        os.environ['SENDER_EMAIL'] = 'devfst1234@gmail.com'
+        os.environ['SENDER_APP_PASSWORD'] = 'ytaxjbpqtmjjzsuf'
+        os.environ['RECIPIENT_EMAILS'] = 'devfst1234@gmail.com,lh3312160@gmail.com'
+        os.environ['FLASK_SECRET_KEY'] = 'd4da551570cc24250f50d567f79c3431c2964445aded8bad60557b314e9c78a5'
     
     def tearDown(self):
         """Clean up after tests"""
@@ -305,4 +305,5 @@ class WebIntegrationTest(unittest.TestCase):
             self.assertEqual(result_data['topic'], 'Test Topic')
 
 if __name__ == '__main__':
+
     unittest.main()
